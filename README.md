@@ -22,4 +22,25 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: "echo 'hello docker!'"
 end
 ```
-Then, running `vagrant up --provider docker` 
+Then, running `vagrant up --provider docker` we will get something like
+```ruby
+> vagrant up --provider docker
+Bringing machine 'default' up with 'docker' provider...
+==> default: Creating the container...
+    default:   Name: vagrant-docker-baseimages_default_1471468586
+    default:  Image: mcheriyath/ubuntu16.04
+    default: Volume: ~/Projects/vagrant-docker-baseimages:/vagrant
+    default:   Port: 127.0.0.1:2222:22
+    default:  
+    default: Container created: f32fb9eea98df378
+==> default: Starting container...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 172.17.0.2:22
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+==> default: Machine booted and ready!
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: mesg: ttyname failed: Inappropriate ioctl for device
+==> default: hello docker!
+``` 
