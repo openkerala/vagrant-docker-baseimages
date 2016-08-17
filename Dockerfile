@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     openssh-server \
     sudo \
-    vim 
+    vim \
+    inetutils-tools 
 
 # Setup Vagrant User Credentials
 RUN if ! getent passwd vagrant; then useradd -d /home/vagrant -m -s /bin/bash vagrant; fi \
