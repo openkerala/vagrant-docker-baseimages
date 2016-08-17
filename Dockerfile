@@ -29,7 +29,7 @@ RUN if ! getent passwd vagrant; then useradd -d /home/vagrant -m -s /bin/bash va
 RUN mkdir -p /home/vagrant/.ssh \
     && chmod 0700 /home/vagrant/.ssh \
     && wget --no-check-certificate \
-      https://raw.github.com/mcheriyath/vagrant-docker-baseimages/master/keys/vagrant.pub \
+      https://raw.githubusercontent.com/openkerala/vagrant-docker-baseimages/master/keys/vagrant.pub \
       -O /home/vagrant/.ssh/authorized_keys \
     && chmod 0600 /home/vagrant/.ssh/authorized_keys \
     && chown -R vagrant /home/vagrant/.ssh
