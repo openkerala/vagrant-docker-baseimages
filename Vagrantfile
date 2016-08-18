@@ -8,6 +8,7 @@ Vagrant.configure(2) do |config|
     d.has_ssh = true
   end
 
-  # use shell and other provisioners as usual
-  config.vm.provision "shell", inline: "echo 'hello docker!'"
+  # Use shell and other provisioners
+  config.vm.provision "shell", 
+    inline: "echo 'hello docker!'"
 end
